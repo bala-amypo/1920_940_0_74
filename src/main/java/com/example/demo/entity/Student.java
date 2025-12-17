@@ -1,7 +1,7 @@
   package com.example.demo.entity;
 
 @entity
-@Table(name = "Student")
+@Table(name = "Students")
 import java.time.LocalDate;
 public class Student {
     @id
