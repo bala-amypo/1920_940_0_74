@@ -1,5 +1,7 @@
   package com.example.demo.entity;
 
+@entity
+@table
 import java.time.LocalDate;
 public class Student {
     private Long id;
