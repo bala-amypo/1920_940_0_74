@@ -1,16 +1,12 @@
-  package com.example.demo.entity;
+package com.example.demo.entity;
 
-@entity
-@Table(name = "Students")
 import java.time.LocalDate;
 public class Student {
-    @id
-    @GeneratedValue(Strategy= GeneratedType.IDENITY)
     private Long id;
     private String name;
     private String email;
     
-    public int getId() {
+    public Long getId() {
         return id;
     }
     public void setId(Long id) {
@@ -35,7 +31,7 @@ public class Student {
         this.email = email;
         
     }
-    public Student() {
-    }
+    public Student() {
+    }
 
 }
