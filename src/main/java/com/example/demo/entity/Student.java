@@ -4,6 +4,8 @@
 @Table(name = "Student")
 import java.time.LocalDate;
 public class Student {
+    @id
+    @GeneratedValue(Strategy= GeneratedType.IDENITY)
     private Long id;
     private String name;
     private String email;
