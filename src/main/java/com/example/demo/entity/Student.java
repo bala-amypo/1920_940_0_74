@@ -1,9 +1,9 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
+import jakarta.Validation.constraints.NotBlank;
+import jakarta.Validation.constraints.Email;
 
-import jakarta.Validation.constraints.NotBlank;
-import jakarta.Validation.constraints.NotBlank;
 
 @Entity
 //@Table(name = "students")
@@ -13,7 +13,9 @@ public class Student {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
     @NotBlank(message="Name field connot be empty")
+    @Size(min=3,max=20,message="The user must be min of 3 and max of 20 characters")
     private String name;
+    @Email(message="Invalid email id")
     private String email;
 
     public Student() {
