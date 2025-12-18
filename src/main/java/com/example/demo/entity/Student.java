@@ -2,6 +2,9 @@ package com.example.demo.entity;
 
 import jakarta.persistence.*;
 
+import jakarta.Validation.constraints.NotBlank;
+import jakarta.Validation.constraints.NotBlank;
+
 @Entity
 //@Table(name = "students")
 public class Student {
@@ -9,7 +12,7 @@ public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long id;
-
+    @NotBlank(message="Name field connot be empty")
     private String name;
     private String email;
 
