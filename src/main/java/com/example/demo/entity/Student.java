@@ -3,7 +3,7 @@ package com.example.demo.entity;
 import jakarta.persistence.*;
 import jakarta.Validation.constraints.NotBlank;
 import jakarta.Validation.constraints.Email;
-
+import jakarta.Validation.constraints.Size;
 
 @Entity
 //@Table(name = "students")
@@ -16,7 +16,10 @@ public class Student {
     @Size(min=3,max=20,message="The user must be min of 3 and max of 20 characters")
     private String name;
     @Email(message="Invalid email id")
+    @column(unique=true)
     private String email;
+
+    
 
     public Student() {
     }
