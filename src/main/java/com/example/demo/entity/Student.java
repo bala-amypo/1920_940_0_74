@@ -1,10 +1,9 @@
 package com.example.demo.entity;
 
 import jakarta.persistence.*;
-import java.time.LocalDate;
 
 @Entity
-@Table(name = "student")
+//@Table(name = "students")
 public class Student {
 
     @Id
@@ -14,17 +13,15 @@ public class Student {
     private String name;
     private String email;
 
-    // Constructors
     public Student() {
     }
 
-    public Student(Long id, String name, String email, LocalDate dob, float cgpa) {
+    public Student(Long  id, String name, String email) {
         this.id = id;
         this.name = name;
         this.email = email;
     }
 
-    // Getters & Setters
     public Long getId() {
         return id;
     }
@@ -34,7 +31,7 @@ public class Student {
     }
 
     public String getName() {
-        return name;
+            return name;
     }
 
     public void setName(String name) {
@@ -46,6 +43,6 @@ public class Student {
     }
 
     public void setEmail(String email) {
-        this.email = email;
-    }
+        this.email = email;
+    }
 }
