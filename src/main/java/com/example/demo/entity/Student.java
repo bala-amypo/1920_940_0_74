@@ -4,7 +4,7 @@ import jakarta.persistence.*;
 import jakarta.Validation.constraints.NotBlank;
 import jakarta.Validation.constraints.Email;
 import jakarta.Validation.constraints.Size;
-
+import jakarta.persistence.olumn;
 @Entity
 //@Table(name = "students")
 public class Student {
