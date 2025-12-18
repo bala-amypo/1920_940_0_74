@@ -23,6 +23,7 @@ public class GlobalExceptionHandler{
 
         mex.getBindingResult().getFieldErrors().forEach(error ->
                 errors.put(error.getField(), error.getDefaultMessage())
+        
         );
 
         return new ResponseEntity<>(errors, HttpStatus.BAD_REQUEST);
